@@ -1,7 +1,9 @@
 import discord
 import joke_api
+from mytoken import my_token
 
 client = discord.Client()
+my_token = my_token
 
 @client.event
 async def on_ready():
@@ -19,9 +21,9 @@ async def on_message(message):
         joke = joke_api.get_joke()
 
         if joke == False:
-            await message.channel.send('Jokenya ngga dapet. Coba lagi nanti.')
+            await message.channel.send('Sorry, no jokes for now~')
         else:
             await message.channel.send(joke['setup'] + '\n' + joke['punchline'])
 
 
-client.run('NzMxMDMwMjk5MTYwNjA4Nzcw.XwgLUg.Ma_EU911y4mnU5pL4_YLrnyqVKQ')
+client.run(my_token)

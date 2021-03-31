@@ -1,4 +1,7 @@
 .idea/
+.vscode/
+mytoken.py
+env-discord-bot/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
